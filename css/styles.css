@@ -370,7 +370,7 @@ img {
 }
 
 .timeline {
-	max-width: 95%;
+	max-width: 100rem;
 	margin-inline: auto;
 	height: 90%;
 	display: grid;
