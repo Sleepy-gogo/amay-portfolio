@@ -53,6 +53,16 @@ h3 {
 	font-size: 3.5rem;
 }
 
+@media (max-width: 998px) {
+    h3 {
+    	font-size: 3rem;
+    }
+
+    p {
+    	line-height: 1.5;
+    }
+}
+
 a {
 	text-decoration: none;
 }
@@ -360,13 +370,32 @@ img {
 	background-position: center bottom;
 	background-repeat: no-repeat;
 	padding-inline: 3rem;
-	height: 100vh;
+	height: 120vh;
+}
+
+@media (max-height: 1000px) {
+    .educacion {
+    	height: 160vh;
+    }
+}
+
+@media (max-width: 440px) {
+    .educacion {
+    	padding-inline: 1rem;
+    }
 }
 
 .educacion__titulo {
 	text-align: center;
 	margin-bottom: 3rem;
 	position: relative;
+}
+
+
+@media (max-width: 440px) {
+    .educacion__titulo {
+		font-size: 4rem;
+	}
 }
 
 .timeline {
@@ -400,12 +429,66 @@ img {
 	margin-inline: auto;
 }
 
+@media (max-width: 768px) {
+    .timeline {
+    	grid-template-columns: 5rem 1fr;
+    }
+
+    .center-line {
+		grid-column: 1/2;
+	}
+
+	.timeline__row {
+		grid-column: 2/3;
+		grid-row: unset;
+	}
+
+    .timeline__row:nth-of-type(odd) {
+		grid-column: 2/3;
+	}
+
+	.timeline__row:nth-of-type(3) {
+		grid-row: unset;
+	}
+
+}
+
+@media (max-width: 440px) {
+    .timeline {
+    	grid-template-columns: 1fr;
+    	width: 100%;
+    	gap: 2rem 0;
+    }
+
+    .center-line {
+		display: none;
+	}
+
+}
 
 .card {
 	background: var(--gray);
 	position: relative;
 	padding: 2rem;
-	margin: 1rem;
+	transition: .2s ease-in-out;
+	transition-property: scale, background-color, box-shadow;
+}
+
+@media (max-width: 998px) {
+    .card {
+    	padding: 1.2rem;
+    }
+}
+
+@media (max-width: 440px) {
+    .card {
+		width: 100%;
+	}
+}
+
+.card:hover {
+	scale: 1.1;
+	box-shadow: 0 0 2rem -.5rem var(--black);
 }
 
 .card::before {
@@ -417,11 +500,30 @@ img {
 	top: 50%;
 	left: calc(100% - 1rem);
 	transform: translateY(-50%) rotate(45deg);
+	transition: background-color .2s ease-in-out;
+}
+
+.card:hover::before {
+	background-color: var(--button-hightlight);
 }
 
 .card-derecha::before {
 	left: unset;
 	right: calc(100% - 1rem);
+}
+
+@media (max-width: 440px) {
+
+    .card::before {
+    	display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .card::before {
+ 	   	left: unset;
+		right: calc(100% - 1rem);
+    }
 }
 
 .card__detalles {
@@ -433,3 +535,5 @@ img {
 .card__titulo {
 	margin: 1rem 0 0 0;
 }
+
+.card__
