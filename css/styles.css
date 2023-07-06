@@ -50,7 +50,7 @@ h2 {
 }
 
 h3 {
-	font-size: 4rem;
+	font-size: 3.5rem;
 }
 
 a {
@@ -357,7 +357,7 @@ img {
 		var(--light-accent)
 	);
 	background-size: cover;
-	background-position: center;
+	background-position: center bottom;
 	background-repeat: no-repeat;
 	padding-inline: 3rem;
 	height: 100vh;
@@ -372,32 +372,40 @@ img {
 .timeline {
 	max-width: 95%;
 	margin-inline: auto;
-}
-
-.center-line {
-	position: absolute;
-	height: 80%;
-	width: .5rem;
-	background: var(--dark-accent);
-	left: 50%;
-	transform: translateX(-50%);
+	height: 90%;
+	display: grid;
+	grid-template-columns: 1fr 5rem 1fr;
+	grid-template-rows: repeat(4, 1fr);
+	gap: 2rem;
 }
 
 .timeline__row {
-	display: flex;
-	justify-content: flex-end;
+	grid-column: 1/2;
+	grid-row: span 2;
 }
 
-.timeline__row:nth-of-type(2n) {
-	justify-content: flex-start;	
+.timeline__row:nth-of-type(odd) {
+	grid-column: 3/4;
 }
+
+.timeline__row:nth-of-type(3) {
+	grid-row: 2 / span 2;
+}
+
+.center-line {
+	grid-column: 2/3;
+	grid-row: 1/ -1;
+	background-color: var(--dark-accent);
+	width: 1rem;
+	margin-inline: auto;
+}
+
 
 .card {
 	background: var(--gray);
 	position: relative;
 	padding: 2rem;
 	margin: 1rem;
-	max-width: 45%;
 }
 
 .card::before {
