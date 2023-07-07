@@ -92,7 +92,7 @@ img {
 .container {
 	max-width: 120rem;
 	margin: 0 auto;
-	width: 90%;
+	width: 95%;
 }
 
 .texto-morado {
@@ -580,6 +580,12 @@ img {
 	margin: 1rem 0 0 0;
 }
 
+@media (max-width: 855px) {
+    .card__descripcion {
+    	margin-top: 0;
+    }
+}
+
 /*
 
 ]=======( Sección Experiencia )=======[
@@ -655,7 +661,7 @@ img {
 
 .trabajo__imagen:hover {
 	scale: 1.05;
-	box-shadow: 0 0 2rem var(--black);
+	box-shadow: 0 0 2rem -0.4rem var(--black);
 }
 
 .trabajo__fecha {
@@ -675,3 +681,75 @@ img {
 	color: var(--main-accent);
 	scale: 1.03;
 }
+
+/*
+
+]=======( Sección Habilidades )=======[
+
+*/
+
+.habilidades {
+	min-height: 100vh;
+	background-image: url('../imgs/svg/habilidades_section.svg');
+	background-size: cover;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	padding-inline: 1rem;
+	padding-block: 2rem;
+}
+
+.habilidades__titulo {
+	text-align: center;
+}
+
+.skills {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	min-height: 80vh;
+	gap: 2rem;
+}
+
+.skill {
+	background-color: var(--gray);
+	padding: 2rem;
+	border-radius: 2rem;
+	width: 23%;
+	transition: .2s ease-in-out;
+	box-shadow: 0 0 2rem -0.8rem var(--black);
+}
+
+.skill:hover {
+	scale: 1.05;
+	box-shadow: 0 .5rem 2rem -0.2rem var(--black);	
+}
+
+.skill__imagen {
+	aspect-ratio: 1/1;
+	width: 60%;
+	margin-inline: auto;
+}
+
+@media (max-width: 1050px) {
+    .skill {
+    	width: 45%;
+    }
+}
+
+@media (max-width: 550px) {
+    .skill {
+    	width: 90%;
+
+    }
+}
+
+.skill__textos {
+	text-align: center;
+}
+
+/*
+
+]=======( Sección Portafolio )=======[
+
+*/
