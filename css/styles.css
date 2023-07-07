@@ -24,6 +24,8 @@
 html {
 	font-size: 62.5%;
 	box-sizing: border-box;
+	scroll-padding-top: 9rem;
+	scroll-behavior: smooth;
 }
 
 *, *:before, *:after {
@@ -236,6 +238,7 @@ img {
 
 .main {
 	min-height: 100vh;
+	min-height: 100svh;
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: space-around;
