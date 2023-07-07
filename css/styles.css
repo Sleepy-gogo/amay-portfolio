@@ -650,6 +650,12 @@ img {
 	width: 150rem;
 	object-fit: cover;
 	border-radius: 2rem;
+	transition: .3s ease-in-out;
+}
+
+.trabajo__imagen:hover {
+	scale: 1.05;
+	box-shadow: 0 0 2rem var(--black);
 }
 
 .trabajo__fecha {
@@ -658,4 +664,14 @@ img {
 
 .trabajo__fecha-inverso {
 	text-align: left;
+}
+
+.trabajo__titulo {
+	cursor: default;
+	transition: color .2s ease-in-out, scale .2s ease-in-out;
+}
+
+.trabajo__titulo:hover {
+	color: var(--main-accent);
+	scale: 1.03;
 }
