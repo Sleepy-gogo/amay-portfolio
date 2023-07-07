@@ -30,6 +30,10 @@ const handleNext = () => {
 	const nextIndex = obtenerSiguienteIndice(indexActivo);
 	const nextOfNextIndex = obtenerSiguienteIndice(nextIndex);
 
+	const anteriorProyecto = document.querySelector('[data-state="before"]')
+
+	anteriorProyecto.setAttribute('data-state', "inactive");
+
 	const proyectoActual = document.querySelector(`[data-index="${indexActivo}"]`),
 		  nextProyecto = document.querySelector(`[data-index="${nextIndex}"]`),
 		  futuroProyecto = document.querySelector(`[data-index="${nextOfNextIndex}"]`)
@@ -44,6 +48,10 @@ const handleNext = () => {
 const handleBack = () => {
 	const backIndex = obtenerPrevioIndice(indexActivo);
 	const backOfBackIndex = obtenerPrevioIndice(backIndex);
+
+	const siguienteProyecto = document.querySelector('[data-state="after"]')
+
+	siguienteProyecto.setAttribute('data-state', "inactive");
 
 	const proyectoActual = document.querySelector(`[data-index="${indexActivo}"]`),
 		  backProyecto = document.querySelector(`[data-index="${backIndex}"]`),

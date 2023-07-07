@@ -193,21 +193,31 @@
 
 	<section class="portafolio" id="portafolio">
 		<h2 class="portafolio__titulo">Portafolio</h2>
-		<div class="carrousel container">
+		<div class="carousel container">
 			<div class="proyectos">
 				<div class="proyecto" data-index="0" data-state="active">
 					<h3 class="proyecto__titulo">Test 1</h3>
-					<img class="proyecto__imagen" src="imgs/carrousel/carrousel_1.png" alt="">
+					<img class="proyecto__imagen" src="imgs/carousel/carousel_1.png" alt="">
 				</div>
 
 				<div class="proyecto" data-index="1" data-state="after">
 					<h3 class="proyecto__titulo">Test 2</h3>
-					<img class="proyecto__imagen" src="imgs/carrousel/carrousel_2.png" alt="">
+					<img class="proyecto__imagen" src="imgs/carousel/carousel_2.png" alt="">
 				</div>
 
 				<div class="proyecto" data-index="2" data-state="before">
 					<h3 class="proyecto__titulo">Test 3</h3>
-					<img class="proyecto__imagen" src="imgs/carrousel/carrousel_3.png" alt="">
+					<img class="proyecto__imagen" src="imgs/carousel/carousel_3.png" alt="">
+				</div>
+
+				<div class="proyecto" data-index="3" data-state="inactive">
+					<h3 class="proyecto__titulo">Test 4</h3>
+					<img class="proyecto__imagen" src="imgs/carousel/carousel_2.png" alt="">
+				</div>
+
+				<div class="proyecto" data-index="4" data-state="inactive">
+					<h3 class="proyecto__titulo">Test 5</h3>
+					<img class="proyecto__imagen" src="imgs/carousel/carousel_1.png" alt="">
 				</div>
 			</div>
 			<div class="controles">
@@ -221,6 +231,30 @@
 			</div>
 		</div>
 	</section>
+
+	<section class="contacto" id="contacto">
+		<h2 class="contacto__titulo">Contacto</h2>
+		<p class="contacto__descripcion">Puedes enviarme un mensaje directamente mediante el siguiente formulario</p>
+		<form onsubmit="handleSubmit()" class="formulario container">
+			<label for="nombre">Nombre</label>
+			<input type="text" name="nombre" id="nombre" class="formulario__input">
+
+			<label for="email">Email</label>
+			<input type="email" name="email" id="email" class="formulario__input">
+
+			<label for="asunto">Asunto</label>
+			<input type="text" name="asunto" id="asunto" class="formulario__input">
+
+			<label for="mensaje">Mensaje</label>
+			<textarea name="mensaje" id="mensaje" class="formulario__input formulario__input-text_area"></textarea>
+
+			<input type="submit" value="Enviar Mensaje" class="formulario__boton">
+		</form>
+	</section>
+
+	<footer>
+		
+	</footer>
 
 </body>
 </html>
