@@ -762,11 +762,13 @@ img {
 	background-repeat: no-repeat;
 	padding-inline: 1rem;
 	padding-block: 2rem;
+	overflow-x: hidden;
 }
 
 .portafolio__titulo {
 	text-align: center;
 	color: white;
+	margin-bottom: 5rem;
 }
 
 .carrousel {
@@ -783,8 +785,38 @@ img {
 	position: absolute;
 	aspect-ratio: 16/9;
 	height: 100%;
-	transition: .2s ease-in-out;
+	transition: .4s ease-in-out;
 	transition-property: translate, scale, opacity;
+}
+
+@media (max-width: 768px) {
+    .proyectos {
+    	aspect-ratio: 4/3;
+    }
+
+    .proyecto {
+    	aspect-ratio: 4/3;
+    }
+}
+
+@media (max-width: 650px) {
+    .proyectos {
+    	aspect-ratio: 1;
+    }
+
+    .proyecto {
+    	aspect-ratio: 1;
+    }
+}
+
+@media (max-width: 550px) {
+    .proyectos {
+    	aspect-ratio: 2/2.5;
+    }
+
+    .proyecto {
+    	aspect-ratio: 2/2.5;
+    }
 }
 
 .proyecto[data-state="before"] {
@@ -807,6 +839,12 @@ img {
 	translate: -50% 0;
 	background-color: var(--light-transparent);
 	padding: 1rem 2rem;
+}
+
+@media (max-width: 650px) {
+    .proyecto__titulo {
+    	font-size: 2rem;
+    }
 }
 
 .proyecto__imagen {
