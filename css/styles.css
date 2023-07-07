@@ -984,3 +984,63 @@ img {
 .formulario__boton:active {
 	background-color: var(--dark-accent);
 }
+
+/*
+
+]=======( Footer )=======[
+
+*/
+
+.footer {
+	margin-top: 5rem;
+	background-color: var(--black);
+	color: white;
+}
+
+.redes_sociales {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding: 2rem;
+	gap: 2rem;
+}
+
+.red {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+.red__icono {
+	border: .2rem white solid;
+	padding: .75rem 1.3rem;
+	color: white;
+	border-radius: 50%;
+	transition: .2s ease-in-out;
+}
+
+.red__tag {
+	color: white;
+}
+
+.red__icono:hover {
+	background-color: var(--light-transparent);
+	scale: 1.05;
+}
+
+.derechos {
+	background-color: var(--darker-black);
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	padding: 1rem;
+}
+
+.derechos p {
+	margin: 0;
+}
+
+@media (min-width: sizepx) {
+    content
+}
