@@ -67,6 +67,12 @@ h3 {
     }
 }
 
+@media (max-width: 440px) {
+    h2 {
+		font-size: 4rem;
+	}
+}
+
 a {
 	text-decoration: none;
 }
@@ -426,11 +432,7 @@ img {
 */
 
 .educacion {
-	background-image: url('../imgs/svg/educacion_section.svg'), linear-gradient(
-		to bottom,
-		white,
-		var(--light-accent)
-	);
+	background-image: url('../imgs/svg/educacion_section.svg');
 	background-size: cover;
 	background-position: center bottom;
 	background-repeat: no-repeat;
@@ -454,13 +456,6 @@ img {
 	text-align: center;
 	margin-bottom: 3rem;
 	position: relative;
-}
-
-
-@media (max-width: 440px) {
-    .educacion__titulo {
-		font-size: 4rem;
-	}
 }
 
 .timeline {
@@ -583,4 +578,84 @@ img {
 
 .card__titulo {
 	margin: 1rem 0 0 0;
+}
+
+/*
+
+]=======( Sección Experiencia )=======[
+
+*/
+
+.experiencia {
+	min-height: 100vh;
+	background-image: url('../imgs/svg/experiencia_section.svg');
+	background-size: cover;
+	background-position: center top;
+	background-repeat: no-repeat;
+	padding-inline: 3rem;
+	padding-block: 2rem;
+}
+
+@media (max-width: 768px) {
+    .experiencia {
+    	padding-inline: 1rem;
+    }
+}
+
+@media (max-width: 440px) {
+    .experiencia {
+    	padding-inline: 0;
+    }
+}
+
+.experiencia__titulo {
+	margin-top: 0;
+	text-align: center;
+	color: white;
+}
+
+.trabajos {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.trabajo {
+	background-color: var(--gray);
+	display: flex;
+	justify-content: space-between;
+	padding: 2rem;
+	gap: 2rem;
+}
+
+.trabajo:nth-of-type(even) {
+	flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+    .trabajo {
+    	flex-direction: column;
+    }
+
+    .trabajo:nth-of-type(even) {
+		flex-direction: column;
+	}
+
+	.trabajo:nth-of-type(even) {
+		flex-direction: column;
+	}
+}
+
+.trabajo__imagen {
+	width: 150rem;
+	object-fit: cover;
+	border-radius: 2rem;
+}
+
+.trabajo__fecha {
+	text-align: right;
+}
+
+.trabajo__fecha-inverso {
+	text-align: left;
 }
