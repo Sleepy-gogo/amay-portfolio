@@ -753,3 +753,85 @@ img {
 ]=======( Sección Portafolio )=======[
 
 */
+
+.portafolio {
+	min-height: 100vh;
+	background-image: url('../imgs/svg/portfolio_section.svg');
+	background-size: cover;
+	background-position: center top;
+	background-repeat: no-repeat;
+	padding-inline: 1rem;
+	padding-block: 2rem;
+}
+
+.portafolio__titulo {
+	text-align: center;
+	color: white;
+}
+
+.carrousel {
+	min-height: 80vh;
+}
+
+.proyectos {
+	height: 100%;
+	position: relative;
+	aspect-ratio: 16/9;
+}
+
+.proyecto {
+	position: absolute;
+	aspect-ratio: 16/9;
+	height: 100%;
+	transition: .2s ease-in-out;
+	transition-property: translate, scale, opacity;
+}
+
+.proyecto[data-state="before"] {
+	translate: -90% 0;
+	scale: 0.9;
+	opacity: 0.8;
+}
+
+.proyecto[data-state="after"] {
+	translate: 90% 0;
+	scale: 0.9;
+	opacity: 0.8;	
+}
+
+.proyecto__titulo {
+	color: var(--darker-black);
+	position: absolute;
+	left: 50%;
+	bottom: 0%;
+	translate: -50% 0;
+	background-color: var(--light-transparent);
+	padding: 1rem 2rem;
+}
+
+.proyecto__imagen {
+	aspect-ratio: 16/9;
+	height: 100%;
+	object-fit: cover;
+}
+
+.controles {
+	padding: 2rem;
+	display: flex;
+	justify-content: center;
+	gap: 3rem;
+	z-index: 10;
+	width: 100%;
+}
+
+.controles__boton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--light-transparent);
+	border: .3rem white solid;
+	color: white;
+	border-radius: 50%;
+	padding: 1rem 1.5rem;
+	font-size: 2rem;
+}

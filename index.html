@@ -193,13 +193,31 @@
 
 	<section class="portafolio" id="portafolio">
 		<h2 class="portafolio__titulo">Portafolio</h2>
-		<div class="carrousel">
+		<div class="carrousel container">
 			<div class="proyectos">
-				<img src="" alt="">
+				<div class="proyecto" data-index="0" data-state="active">
+					<h3 class="proyecto__titulo">Test 1</h3>
+					<img class="proyecto__imagen" src="imgs/carrousel/carrousel_1.png" alt="">
+				</div>
+
+				<div class="proyecto" data-index="1" data-state="after">
+					<h3 class="proyecto__titulo">Test 2</h3>
+					<img class="proyecto__imagen" src="imgs/carrousel/carrousel_2.png" alt="">
+				</div>
+
+				<div class="proyecto" data-index="2" data-state="before">
+					<h3 class="proyecto__titulo">Test 3</h3>
+					<img class="proyecto__imagen" src="imgs/carrousel/carrousel_3.png" alt="">
+				</div>
 			</div>
 			<div class="controles">
-				<button class="controles__retroceder"></button>
-				<button class="controles__avanzar"></button>
+				<button class="controles__boton" onclick="handleBack()">
+					<i class="fa-solid fa-caret-left"></i>
+				</button>
+
+				<button class="controles__boton" onclick="handleNext()">
+					<i class="fa-solid fa-caret-right"></i>
+				</button>
 			</div>
 		</div>
 	</section>
