@@ -237,16 +237,16 @@
 		<p class="contacto__descripcion">Puedes enviarme un mensaje directamente mediante el siguiente formulario</p>
 		<form onsubmit="handleSubmit()" class="formulario container">
 			<label for="nombre">Nombre</label>
-			<input type="text" name="nombre" id="nombre" class="formulario__input">
+			<input required type="text" name="nombre" id="nombre" class="formulario__input">
 
 			<label for="email">Email</label>
-			<input type="email" name="email" id="email" class="formulario__input">
+			<input required type="email" name="email" id="email" class="formulario__input">
 
 			<label for="asunto">Asunto</label>
-			<input type="text" name="asunto" id="asunto" class="formulario__input">
+			<input required type="text" name="asunto" id="asunto" class="formulario__input">
 
 			<label for="mensaje">Mensaje</label>
-			<textarea name="mensaje" id="mensaje" class="formulario__input formulario__input-text_area"></textarea>
+			<textarea required name="mensaje" id="mensaje" class="formulario__input formulario__input-text_area"></textarea>
 
 			<input type="submit" value="Enviar Mensaje" class="formulario__boton">
 		</form>

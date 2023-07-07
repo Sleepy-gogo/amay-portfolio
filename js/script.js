@@ -63,3 +63,9 @@ const handleBack = () => {
 
 	indexActivo = backIndex;
 };
+
+const handleSubmit = (e) => {
+	e.preventDefault();
+
+	alert("Mensaje enviado exitosamente.")
+}
